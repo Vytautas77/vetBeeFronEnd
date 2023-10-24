@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style/style.css" />
+    <link rel="stylesheet" href="./style/addPet.css" />
+    <title>Add Pet</title>
+  </head>
+  <body>
+    <header class="petListHeader">
+      <div class="header">
+        <a href="./index.html"><img src="./logo.png" alt="Logo" /></a>
+        <div class="topHeaderRight">
+          <a href="#">Pets</a>
+          <a href="#">Medications</a>
+        </div>
+      </div>
+      <div class="header">
+        <h1>Add Pet</h1>
+        </div>
+      </div>
+    </header>
+    <main>
+        <div id="inputsBox" class="inputsBox">
+            <input type="text" id="petName" placeholder="Pet name" />
+            <input type="text" id="petPhotoUrl" placeholder="Pet photo URL" />
+            <input type="text" id="petDob" placeholder="Pet date of birth" />
+            <input type="text" id="clientEmail" placeholder="Client email" />
+            <button id="AddBtn" >ADD PET</button>
+          </div>
+          <div id="infoMessage" class="infoMessage"></div>
+    </main>
+
+    <script src="./src/addPet.js"></script>
+  </body>
+</html>

@@ -1,0 +1,12 @@
+.inputsBox {
+  margin-top: 2rem;
+  margin-left: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.inputsBox input {
+  padding: 0.5rem 1rem;
+  width: 40%;
+  border-radius: 0.5rem;
+}
