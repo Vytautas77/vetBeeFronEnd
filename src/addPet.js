@@ -1,7 +1,7 @@
 const AddBtn = document.getElementById("AddBtn");
 const infoMessage = document.getElementById("infoMessage");
 const linkRegex = /^(https?:\/\/)?([\da-z.-]+)\.([a-z.]{2,6})([/\w .-]*)*\/?$/;
-const dobRegex = /\d{4}-\d{2}-\d{2}/;
+const dobRegex = /^\d{4}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])$/;
 const emailRegex = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/;
 const inputFetch = "http://localhost:3000/pets";
 
@@ -14,7 +14,6 @@ const inputData = () => {
     infoMessage.innerHTML = "The Pet name field is not entered!";
     throw new Error("The Pet name field is not entered!");
   }
-
   if (!petDob) {
     infoMessage.innerHTML = "The Pet date of birth field is not entered!";
     throw new Error("The Pet date of birth field is not entered!");

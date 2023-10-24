@@ -1,0 +1,37 @@
+.addPrescription {
+  width: 15rem;
+  text-decoration: none;
+}
+.addPrescription a {
+  text-decoration: none;
+  color: aliceblue;
+}
+.addLog {
+  background-color: #ffffff;
+}
+.addLog a {
+  text-decoration: none;
+  color: #ff8000;
+}
+.petInfo {
+  width: 100%;
+  display: flex;
+  margin-left: 3rem;
+  margin-top: 1rem;
+}
+.petPhoto {
+  width: 50%;
+  height: 20rem;
+}
+.textBox {
+  width: 40%;
+}
+p {
+  margin-left: 2rem;
+}
+.name {
+  font-size: 3rem;
+}
+.medicationsBox {
+  margin-left: 1rem;
+}

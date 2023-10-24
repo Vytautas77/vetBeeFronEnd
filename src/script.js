@@ -3,8 +3,13 @@ const infoMessageBox = document.getElementById("infoMessageBox");
 const petsFetch = "http://localhost:3000/pets/";
 
 const petsCard = (pet) => {
-  const wrapper = document.createElement("div");
+  const wrapper = document.createElement("a");
   wrapper.setAttribute("class", "petWrapper");
+  wrapper.href = "./petHtml.html";
+  wrapper.addEventListener("click", () => {
+    localStorage.setItem("PetId", pet.id); //nukeliama ID I Local Storage
+  });
+
   const btnWrapper = document.createElement("div");
   btnWrapper.setAttribute("class", "btnWrapper");
 

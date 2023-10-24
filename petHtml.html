@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style/style.css" />
+    <link rel="stylesheet" href="./style/petHtml.css" />
+    <title>Pet order</title>
+  </head>
+  <body>
+    <header class="petListHeader">
+      <div class="header">
+        <a href="./index.html"><img src="./logo.png" alt="Logo" /></a>
+        <div class="topHeaderRight">
+          <a href="./index.html">Pets</a>
+          <a href="#">Logs</a>
+        </div>
+      </div>
+      <div class="header">
+        <h1 id="petName"></h1>
+        <div>
+          <button id="addPrescription" class="addPrescription">
+            <a href="#">ADD PRESCRIPTION</a>
+          </button>
+          <button id="addLog" class="addLog">
+            <a href="./addPet.html">ADD LOG</a>
+          </button>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="petInfo">
+        <img id="petPhoto" class="petPhoto" alt="photo" />
+        <div class="textBox">
+          <p>Name: <snap id="name" class="name"></snap></p>
+          <p>Date of birth: <snap id="dob" class="dob"></snap></p>
+          <p>Client email: <snap id="email" class="email"></snap></p>
+        </div>
+      </div>
+      <div class="medicationsBox">
+        <p>Medication name: <snap id="medName" class="medName"></snap></p>
+        <p>
+          Medication description:
+          <snap id="medDescription" class="medDescription"></snap>
+        </p>
+        <p>
+          Prescriptions comment:
+          <snap id="comment" class="comment"></snap>
+        </p>
+        <p>
+          Prescriptions created at:
+          <snap id="created" class="created"></snap>
+        </p>
+      </div>
+    </main>
+    <script src="./src/petHtml.js"></script>
+  </body>
+</html>
