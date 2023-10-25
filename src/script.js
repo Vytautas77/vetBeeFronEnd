@@ -3,7 +3,7 @@ const infoMessageBox = document.getElementById("infoMessageBox");
 const petsFetch = "http://localhost:3000/pets/";
 
 const petsCard = (pet) => {
-  const wrapper = document.createElement("a");
+  const wrapper = document.createElement("div");
   wrapper.setAttribute("class", "petWrapper");
   wrapper.href = "./petHtml.html";
   wrapper.addEventListener("click", () => {
@@ -26,26 +26,12 @@ const petsCard = (pet) => {
   petEmail.setAttribute("class", "petEmail");
   petEmail.innerHTML = pet.client_email;
 
-  const viewLogBtn = document.createElement("button");
+  const viewLogBtn = document.createElement("a");
   viewLogBtn.setAttribute("class", "button");
   viewLogBtn.innerHTML = "VIEW LOG";
-  viewLogBtn.addEventListener("click", async () => {
-    try {
-      //   const carId = pet.id;
-      //   localStorage.setItem("carId", carId);
-      //   const response = await fetch(petsFetch + carId, {
-      //     method: "DELETE",
-      //   });
-      //   const data = await response.json();
-      //   if (data) {
-      //     alert("INFORMATION DELETED SUCCESSFULLY.");
-      //     setTimeout(() => {
-      //       window.location.reload();
-      //     }, 1000);
-      //   }
-    } catch (err) {
-      alert("INFORMATION NOT DELETED.");
-    }
+  viewLogBtn.href = "./petHtml.html";
+  viewLogBtn.addEventListener("click", () => {
+    localStorage.setItem("PetId", pet.id); //nukeliama ID I Local Storage
   });
 
   const delBtn = document.createElement("button");

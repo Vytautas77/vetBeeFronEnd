@@ -19,14 +19,13 @@ const addPetScreen = (pet) => {
   const comment = document.getElementById("comment");
   comment.innerHTML = pet.comment;
   const created = document.getElementById("created");
-  created.innerHTML = pet.created_at;
+  created.innerHTML = pet.created_at.substring(0, 10);
 };
 
 const getInfo = async () => {
   const response = await fetch(petFetch + petId);
   const petArray = await response.json(); //informacijos pasiėmimas is API pagal ID
   const pet = petArray.prescriptions[0];
-  console.log(pet);
   addPetScreen(pet);
 };
 getInfo();

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style/style.css" />
+    <link rel="stylesheet" href="./style/addPrescriptions.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header class="petListHeader">
+      <div class="header">
+        <a href="./index.html"><img src="./logo.png" alt="Logo" /></a>
+        <div class="topHeaderRight">
+          <a href="./index.html">Pets</a>
+          <a href="#">Logs</a>
+        </div>
+      </div>
+      <div class="header">
+        <h1 id="petName">Add prescriptions</h1>
+        <div>
+          <button id="addLog" class="addLog">
+            <a href="./addPet.html">ADD LOG</a>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div id="inputsBox" class="inputsBox">
+        <input type="text" id="medicationId" placeholder="Medication Id" />
+        <input type="text" id="comment" placeholder="Comment" />
+        <button id="AddBtn" class="prescriptionsBtn">ADD PRESCRIPTION</button>
+      </div>
+      <div id="infoMessage" class="infoMessage"></div>
+    </main>
+    <script src="./src/addPrescriptions.js"></script>
+  </body>
+</html>
