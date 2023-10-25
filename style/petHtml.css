@@ -33,5 +33,15 @@ p {
   font-size: 3rem;
 }
 .medicationsBox {
-  margin-left: 1rem;
+  margin-left: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+.medicationsBox p {
+  margin: 0.2rem;
+}
+.medWrapper:nth-child(2n + 0) {
+  background: rgb(219, 218, 218);
 }

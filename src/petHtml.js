@@ -1,5 +1,6 @@
 const petId = localStorage.getItem("PetId"); // paimamas ID iš local Storage
 const petFetch = "http://localhost:3000/prescriptions/";
+const medicationsBox = document.getElementById("medicationsBox");
 
 const addPetScreen = (pet) => {
   const petName = document.getElementById("petName");
@@ -12,20 +13,33 @@ const addPetScreen = (pet) => {
   dob.innerHTML = pet.dob.substring(0, 10);
   const email = document.getElementById("email");
   email.innerHTML = pet.client_email;
-  const medName = document.getElementById("medName");
-  medName.innerHTML = pet.med_name;
-  const medDescription = document.getElementById("medDescription");
-  medDescription.innerHTML = pet.description;
-  const comment = document.getElementById("comment");
-  comment.innerHTML = pet.comment;
-  const created = document.getElementById("created");
-  created.innerHTML = pet.created_at.substring(0, 10);
+};
+
+const addMedicationToScreen = (pet) => {
+  const medWrapper = document.createElement("div");
+  medWrapper.setAttribute("class", "medWrapper");
+
+  const medName = document.createElement("p");
+  medName.innerHTML = `Medication name: ${pet.med_name}`;
+  const medDescription = document.createElement("p");
+  medDescription.innerHTML = `Medication description: ${pet.description}`;
+  const comment = document.createElement("p");
+  comment.innerHTML = `Comment: ${pet.comment}`;
+  const created = document.createElement("p");
+  created.innerHTML = `Document create at: ${pet.created_at.substring(0, 10)}`;
+
+  medWrapper.append(medName, medDescription, comment, created);
+  return medWrapper;
 };
 
 const getInfo = async () => {
   const response = await fetch(petFetch + petId);
   const petArray = await response.json(); //informacijos pasiėmimas is API pagal ID
-  const pet = petArray.prescriptions[0];
-  addPetScreen(pet);
+  const prescriptions = petArray.prescriptions;
+  prescriptions.forEach((pet) => {
+    addPetScreen(pet);
+    const card = addMedicationToScreen(pet);
+    medicationsBox.append(card);
+  });
 };
 getInfo();
